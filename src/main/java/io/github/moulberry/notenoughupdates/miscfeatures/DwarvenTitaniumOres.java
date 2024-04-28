@@ -68,7 +68,13 @@ public class DwarvenTitaniumOres {
 			boolean hasCommissions = false;
 
 			for (Map.Entry<String, Float> entry : MiningOverlay.commissionProgress.entrySet()) {
-				if (entry.getKey().contains("Titanium") && entry.getValue() != 1f) {
+				String key = entry.getKey();
+
+				if (key.contains("Titanium") && entry.getValue() != 1f) {
+					if (!key.contains(SBInfo.getInstance().getScoreboardLocation()) && !key.contains("Miner")) {
+						continue;
+					}
+
 					hasCommissions = true;
 					break;
 				}
