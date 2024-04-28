@@ -160,6 +160,17 @@ public class WorldConfig {
 
 	@Expose
 	@ConfigOption(
+		name = "Slow Update",
+		desc = "Updates the colour every second instead of every tick.\n" +
+			"\u00A7cWARNING: This will cause all texture animations (eg. flowing water) to update slowly.\n" +
+			"This should only be used on low-end machines"
+	)
+	@ConfigEditorBoolean
+	@ConfigAccordionId(id = 5)
+	public boolean slowTitaniumOverlay = false;
+
+	@Expose
+	@ConfigOption(
 		name = "Titanium Ores Color",
 		desc = "What color to use for the Titanium Ores overlay"
 	)

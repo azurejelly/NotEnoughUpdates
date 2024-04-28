@@ -136,7 +136,9 @@ public class NEUEventListener {
 		if (!NotEnoughUpdates.INSTANCE.config.dungeons.slowDungeonBlocks) {
 			DungeonBlocks.tick();
 		}
-		DwarvenTitaniumOres.tick();
+		if (!NotEnoughUpdates.INSTANCE.config.world.slowTitaniumOverlay) {
+			DwarvenTitaniumOres.tick();
+		}
 		DungeonWin.tick();
 
 		String containerName = null;
@@ -165,7 +167,6 @@ public class NEUEventListener {
 
 
 		if (longUpdate) {
-
 			if (!(Minecraft.getMinecraft().currentScreen instanceof GuiItemRecipe)) {
 				RecipeHistory.clear();
 			}
@@ -195,6 +196,10 @@ public class NEUEventListener {
 
 			if (NotEnoughUpdates.INSTANCE.config.dungeons.slowDungeonBlocks) {
 				DungeonBlocks.tick();
+			}
+
+			if (NotEnoughUpdates.INSTANCE.config.world.slowTitaniumOverlay) {
+				DwarvenTitaniumOres.tick();
 			}
 
 			if (System.currentTimeMillis() - SBInfo.getInstance().joinedWorld > 500 &&
