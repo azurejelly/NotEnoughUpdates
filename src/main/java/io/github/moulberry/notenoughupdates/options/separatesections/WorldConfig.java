@@ -142,28 +142,28 @@ public class WorldConfig {
 
 	@Expose
 	@ConfigOption(
-		name = "Highlight Titanium Ores",
-		desc = "Highlight Titanium ores in the Dwarven Mines"
+		name = "Titanium Ores Overlay",
+		desc = "Change the color of Titanium Ores in the Dwarven Mines, making them stand out from other blocks."
 	)
 	@ConfigEditorBoolean
 	@ConfigAccordionId(id = 5)
-	public boolean highlightTitaniumOres = true;
+	public boolean overlayTitaniumOres = true;
 
 	@Expose
 	@ConfigOption(
 		name = "Commission Required",
-		desc = "Titanium Ores will only be highlighted when required by the King commissions."
+		desc = "Titanium Ores will only have an overlay when required by the King commissions."
 	)
 	@ConfigEditorBoolean
 	@ConfigAccordionId(id = 5)
-	public boolean highlightTitaniumOnlyWhenRequiredByCommissions = false;
+	public boolean titaniumOverlayCommissionsRequired = false;
 
 	@Expose
 	@ConfigOption(
 		name = "Titanium Ores Color",
-		desc = "In which color should titanium ores be highlighted"
+		desc = "What color to use for the Titanium Ores overlay"
 	)
 	@ConfigEditorColour
 	@ConfigAccordionId(id = 5)
-	public String titaniumOresColor2 = "0:100:0:255:0";
+	public String titaniumOresColor2 = "0:100:0:255:255";
 }

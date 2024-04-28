@@ -60,11 +60,11 @@ public class DwarvenTitaniumOres {
 			return false;
 		}
 
-		if (!NotEnoughUpdates.INSTANCE.config.world.highlightTitaniumOres) {
+		if (!NotEnoughUpdates.INSTANCE.config.world.overlayTitaniumOres) {
 			return false;
 		}
 
-		if (NotEnoughUpdates.INSTANCE.config.world.highlightTitaniumOnlyWhenRequiredByCommissions) {
+		if (NotEnoughUpdates.INSTANCE.config.world.titaniumOverlayCommissionsRequired) {
 			boolean hasCommissions = false;
 
 			for (Map.Entry<String, Float> entry : MiningOverlay.commissionProgress.entrySet()) {
