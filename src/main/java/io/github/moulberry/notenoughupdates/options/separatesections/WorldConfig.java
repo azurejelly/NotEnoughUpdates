@@ -131,4 +131,39 @@ public class WorldConfig {
 	@ConfigEditorColour
 	@ConfigAccordionId(id = 4)
 	public String crystalHollowChestColor = "0:66:255:0:41";
+
+	@Expose
+	@ConfigOption(
+		name = "Titanium Ores",
+		desc = ""
+	)
+	@ConfigEditorAccordion(id = 5)
+	public boolean titaniumOresAccordion = true;
+
+	@Expose
+	@ConfigOption(
+		name = "Highlight Titanium Ores",
+		desc = "Highlight Titanium ores in the Dwarven Mines"
+	)
+	@ConfigEditorBoolean
+	@ConfigAccordionId(id = 5)
+	public boolean highlightTitaniumOres = true;
+
+	@Expose
+	@ConfigOption(
+		name = "Commission Required",
+		desc = "Titanium Ores will only be highlighted when required by the King commissions."
+	)
+	@ConfigEditorBoolean
+	@ConfigAccordionId(id = 5)
+	public boolean highlightTitaniumOnlyWhenRequiredByCommissions = false;
+
+	@Expose
+	@ConfigOption(
+		name = "Titanium Ores Color",
+		desc = "In which color should titanium ores be highlighted"
+	)
+	@ConfigEditorColour
+	@ConfigAccordionId(id = 5)
+	public String titaniumOresColor2 = "0:100:0:255:0";
 }

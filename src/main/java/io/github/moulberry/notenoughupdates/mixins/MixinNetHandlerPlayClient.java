@@ -127,7 +127,7 @@ public class MixinNetHandlerPlayClient {
 
 	@Inject(method = "handleMultiBlockChange", at = @At("HEAD"))
 	public void handleMultiBlockChange(S22PacketMultiBlockChange packetIn, CallbackInfo ci) {
-		 CrystalHollowChestHighlighter.processMultiBlockChangePacket(packetIn);
+		CrystalHollowChestHighlighter.processMultiBlockChangePacket(packetIn);
 	}
 
 	@Inject(method = "addToSendQueue", at = @At("HEAD"), cancellable = true)

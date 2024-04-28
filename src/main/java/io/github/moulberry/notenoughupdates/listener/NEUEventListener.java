@@ -29,6 +29,7 @@ import io.github.moulberry.notenoughupdates.dungeons.DungeonWin;
 import io.github.moulberry.notenoughupdates.miscfeatures.CookieWarning;
 import io.github.moulberry.notenoughupdates.miscfeatures.CrystalMetalDetectorSolver;
 import io.github.moulberry.notenoughupdates.miscfeatures.CrystalOverlay;
+import io.github.moulberry.notenoughupdates.miscfeatures.DwarvenTitaniumOres;
 import io.github.moulberry.notenoughupdates.miscfeatures.FairySouls;
 import io.github.moulberry.notenoughupdates.miscfeatures.ItemCustomizeManager;
 import io.github.moulberry.notenoughupdates.miscfeatures.NPCRetexturing;
@@ -135,6 +136,7 @@ public class NEUEventListener {
 		if (!NotEnoughUpdates.INSTANCE.config.dungeons.slowDungeonBlocks) {
 			DungeonBlocks.tick();
 		}
+		DwarvenTitaniumOres.tick();
 		DungeonWin.tick();
 
 		String containerName = null;
