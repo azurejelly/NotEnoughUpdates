@@ -147,7 +147,7 @@ public class WorldConfig {
 	)
 	@ConfigEditorBoolean
 	@ConfigAccordionId(id = 5)
-	public boolean overlayTitaniumOres = true;
+	public boolean overlayTitaniumOres = false;
 
 	@Expose
 	@ConfigOption(
@@ -156,7 +156,7 @@ public class WorldConfig {
 	)
 	@ConfigEditorBoolean
 	@ConfigAccordionId(id = 5)
-	public boolean titaniumOverlayCommissionsRequired = false;
+	public boolean titaniumOverlayCommissionsRequired = true;
 
 	@Expose
 	@ConfigOption(
@@ -176,5 +176,5 @@ public class WorldConfig {
 	)
 	@ConfigEditorColour
 	@ConfigAccordionId(id = 5)
-	public String titaniumOresColor2 = "0:100:0:255:255";
+	public String titaniumOresColor2 = "0:190:255:0:75";
 }
