@@ -22,6 +22,8 @@ package io.github.moulberry.notenoughupdates.miscfeatures;
 import io.github.moulberry.notenoughupdates.NotEnoughUpdates;
 import io.github.moulberry.notenoughupdates.autosubscribe.NEUAutoSubscribe;
 import io.github.moulberry.notenoughupdates.core.util.render.TextRenderUtils;
+import io.github.moulberry.notenoughupdates.miscfeatures.customblockzones.CustomBiomes;
+import io.github.moulberry.notenoughupdates.miscfeatures.customblockzones.SpecialBlockZone;
 import io.github.moulberry.notenoughupdates.overlays.MiningOverlay;
 import io.github.moulberry.notenoughupdates.util.SBInfo;
 import io.github.moulberry.notenoughupdates.util.SpecialColour;
@@ -77,6 +79,8 @@ public class MiningStuff {
 					if (existingBlock == null) return;
 					if (existingBlock.getBlock() == Blocks.stone &&
 						existingBlock.getValue(BlockStone.VARIANT) == BlockStone.EnumType.DIORITE_SMOOTH)
+						return;
+					if (CustomBiomes.INSTANCE.getSpecialZone(pos) == SpecialBlockZone.DWARVEN_MINES_NON_MITHRIL)
 						return;
 					if (!checkIfAnyIsAir(getAttachedBlocks(pos)) &&
 						NotEnoughUpdates.INSTANCE.config.mining.titaniumAlertMustBeVisible)
